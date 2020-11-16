@@ -8,7 +8,9 @@ export class GithubReposService {
 
   constructor(private http: HttpClient) { }
 
-  getRepo(){
-    return this.http.get( 'https://api.github.com/users/${craig-ke}/repos');
+  getGithubPublicRepositories(){
+
+
+    return this.http.get( 'https://api.github.com/users/craig-ke/repos');
   }
 }

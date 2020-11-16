@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiurl:"https://api.github.com/users/${craig-ke}/repos"
+  apiKey:'d58b679e393bb08b25b51a91278eaf3f81455c4c'
 };
 
 /*
