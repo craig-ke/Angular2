@@ -1,22 +1,26 @@
-<app-github></app-github>
-<div class=" container">
-  <div class="text-center p-5">
-    <h4>
-      Craig Olonyi
-      <small class="text-center p-5">GitHub Public Repositories</small>
-    </h4>
-  </div>
-  <div class="row">
-
-    <div class="col-sm-6" *ngFor="let repo of gitHubRepos">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title"> {{repo.name}}</h5>
-          <p class="card-text"> {{repo.description}}</p>
-          <a href="{{repo.html url}}" target="-blank" class="btn btn-primary"> Go Repository</a>
-
-        </div>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">GithubSearch</a>
       </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          
+        </ul>
+    </div> 
+  </div>
+</nav>    
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+    <app-github></app-github>
     </div>
   </div>
 </div>
