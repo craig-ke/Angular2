@@ -1,20 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GithubReposServices } from './github-repos.service'
-import{ HttpClientModule} from '@angula/common/http';
-import { from } from 'rxjs';
+import { GithubComponent } from './github/github.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GithubComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
-    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
