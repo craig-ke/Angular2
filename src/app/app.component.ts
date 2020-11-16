@@ -7,7 +7,7 @@ import {HttpClientModule} from  '@angular/common/http/http';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
-  directives:[GithubComponent],
+  directives : [GithubComponent],
   providers:[HttpClientModule ,GithubService]
 })
 export class AppComponent {}

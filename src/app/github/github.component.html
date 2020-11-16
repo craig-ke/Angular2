@@ -2,7 +2,7 @@
    <div class="col-md-12">
        <form >
            <div class="form-group">
-               <input type="text" class="form -control" placeholder="Github Username" [(ngModel)]="Username"  (keyup)="search()"> 
+               <input type="text" class="form -control" placeholder="Github Username.Press enter...." [(ngModel)]="Username"  (keyup.enter)="search()"> 
            </div>
 
        </form>
@@ -39,8 +39,6 @@
         </div>
        </div>
    </div>
-      
-   
    <div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-tittle">{{user.name}}s Repos</h3>
