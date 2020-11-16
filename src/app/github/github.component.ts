@@ -10,6 +10,8 @@ import { GithubService} from '../github-repos.service';
 export class GithubComponent {
     user:any;
     repos:any;
+    username:any;
+
   constructor(private _githubService:GithubService) {
     this._githubService.getUser().subscribe(user =>{
       this.user = user;
@@ -19,6 +21,9 @@ export class GithubComponent {
       this.repos= repos;
       console.log(this.repos);
     });
+   }
+   search(){
+     this._githubService.updateUsername(this.username)
    }
   }
 
