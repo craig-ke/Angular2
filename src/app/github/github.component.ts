@@ -2,7 +2,7 @@ import { Component,  } from '@angular/core';
 import { GithubService} from '../github-repos.service';
 
 @Component({
-  moduleId: module.id,
+  // moduleId: module.id,
   selector: 'app-github',
   templateUrl: './github.component.html',
   styleUrls: ['./github.component.css']
@@ -14,7 +14,7 @@ export class GithubComponent {
 
   constructor(private _githubService:GithubService) {
     this.user=false;
-    
+
    }
    search(){
      this._githubService.updateUsername(this.username);
