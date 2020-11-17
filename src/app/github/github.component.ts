@@ -1,5 +1,5 @@
-import { Component,  } from '@angular/core';
-import { GithubService} from '../github-repos.service';
+import { Component  } from '@angular/core';
+import { GithubRepoService} from '../github-repos.service';
 
 @Component({
   // moduleId: module.id,
@@ -12,17 +12,17 @@ export class GithubComponent {
     repos:any;
     username:any;
 
-  constructor(private _githubService:GithubService) {
+  constructor(private _githubService:GithubRepoService) {
     this.user=false;
 
    }
    search(){
      this._githubService.updateUsername(this.username);
 
-     this._githubService.getUser().subscribe(user =>{
+     this._githubService.getGithubPublicUser().subscribe(user =>{
       this.user = user;
     });
-    this._githubService.getRepos().subscribe(repos =>{
+    this._githubService.getGithubPublicRepositories().subscribe(repos =>{
       this.repos= repos;
     });
    }

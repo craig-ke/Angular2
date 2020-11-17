@@ -4,8 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GithubComponent } from './github/github.component';
 import {FormsModule} from '@angular/forms';
-import {HttpClient} from '@angular/common/http';
-import {GithubService} from '../app/github-repos.service';
+import { HttpClientModule} from '@angular/common/http';
+import {GithubRepoService} from '../app/github-repos.service';
 
 @NgModule({
   declarations: [
@@ -15,10 +15,10 @@ import {GithubService} from '../app/github-repos.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClient,
+    HttpClientModule,
     FormsModule
   ],
-  providers: [GithubService],
+  providers: [GithubRepoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
