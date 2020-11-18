@@ -1,0 +1,93 @@
+<div class="m-x-auto">
+
+    <div class="starter-template text-xs-center">
+      <app-search (userUpdated)="search($event)"></app-search>
+    </div>
+  
+  </div>
+    
+    <section>
+      
+      <div class="container">
+        <div class="container" *ngIf="searchUsers">
+          <h4 class="container ">{{githubUsers.name}}</h4>
+          <div class="container-sm">
+              <hr class="bg-dark">
+          </div>
+          <div class="card shadow-md">
+            <div class="row">
+              <div class="col-xl-4 m-b-1">
+                <img src="{{githubUsers.avatar_url}}" class="profile-img img-thumbnail m-1" />
+                <a class="btn btn-sm btn-info btn-block m-1" href="{{githubUsers.html_url}}"
+                  target="_blank">View
+                  Profile</a>
+              </div>
+    
+              <div class="col-xl-8 ">
+                <div class="card shadow-lg m-1">
+                  <ul class="list-group ">
+                      <li class="list-group-item" ><b>Username: </b> {{githubUsers.login}}</li>
+                      <li class="list-group-item" ><b>Location: </b> {{githubUsers.location}}</li>
+                      <li class="list-group-item" ><b>E-Mail: </b> {{githubUsers.email}}</li>
+                      <li class="list-group-item" ><b>Date Joined: </b> {{githubUsers.created_at|date}}
+                        <br>
+                        <span class="blockquote-footer">{{githubUsers.created_at | date|dateAgo}}</span>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div><br>
+            <div class="row">
+                <div class="col-md-5">
+                  <div class="card p-auto shadow-md m-1">
+    
+                      <span class="bg-white text-center text-primary bold"> {{githubUsers.public_repos}} Public Repositories </span>&nbsp;
+                      <span class="bg- bg-white mt-1 text-center text-warning bold"> {{githubUsers.followers}} Followers </span>&nbsp;
+                      <span class="bg-white mt-1 text-center text-secondary bold mb-1"> {{githubUsers.following}} Followings </span>
+            
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="container">
+          <div class=" card bg-dark text-white ">
+              <h2 class="text-center" >Repositories</h2>
+              <div class="container-sm">
+                  <hr class="bg-light">
+              </div>
+              <div class="githubRepos">
+                <div class="label " *ngFor="let githubRepo of githubRepos">
+                  <div class="card-body">
+                    <h4 class="card-title h4" >Repo Name: <span class="rep">{{githubRepo.name}}</span> </h4>
+                    <div class="card-text">
+                      <hr>
+                      <h5 class="" >Description:<span> {{githubRepo.description}}</span></h5>
+                      <div class="card-subtitle mb-2" >Language: <span> {{githubRepo.language}}</span></div>
+                      <div class="card-subtitle mb-2">Created: <span id="created">{{githubRepo.created_at|date }}</span>
+                        <br>
+                        <span class="blockquote-footer">{{githubRepo.created_at | date|dateAgo}}</span></div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="btn-group" e>Watchers:
+                      <button class="btn btn-sm btn-light text-dark"><span class="forks">{{githubRepo.watchers_count}}</span></button>
+                    </div>&nbsp;&nbsp;
+                    <div class="btn-group" >Forks:
+                      <button class="btn btn-sm btn-outline-warning">
+                        <span class="forks">{{githubRepo.forks}}</span></button>
+                    </div>
+                    <div class="btn-group ml-5 mt-2">
+                      <button class="btn btn-success" id="visit"><a href="{{githubRepo.html_url}}" target="blank"
+                          class="card-link text-white">View</a> </button>
+        
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+  
