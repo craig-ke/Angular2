@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'; 
 import {  HttpClient, } from '@angular/common/http';
-import'rxjs'
+import'rxjs/add/operator/map'
 import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 import { Data } from '@angular/router';
 
