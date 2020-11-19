@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GhUsers }from '../../models/gh-users';
-import { GhRepo }from '../../models/gh-repo';
+import { GhUsers }from '../../Models/gh-user';
+import { GhRepo }from '../../Models/gh-repo';
 import { GhServiceService } from '../../service/gh-service.service';
 @Component({
   selector: 'app-repo',

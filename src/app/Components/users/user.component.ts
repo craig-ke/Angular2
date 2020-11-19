@@ -5,8 +5,8 @@ import { GhServiceService } from '../../service/gh-service.service';
 
 @Component({
   selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css']
 })
 export class UsersComponent implements OnInit {
 
@@ -36,7 +36,7 @@ export class UsersComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.search('JeremiahNgige');
+    this.search('craig-ke');
   }
 
 }

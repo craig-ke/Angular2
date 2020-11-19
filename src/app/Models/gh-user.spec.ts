@@ -1,7 +1,7 @@
-import { GhUsers } from './gh-user';
+import { GhRepo } from './gh-repo';
 
-describe('GhUsers', () => {
+describe('GhRepo', () => {
   it('should create an instance', () => {
-    expect(new GhUsers()).toBeTruthy();
+    // expect(new GhRepo()).toBeTruthy();
   });
 });
