@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { GhUsers }from '../../Models/gh-user';
+import { GhUser }from '../../Models/gh-user';
 import { GhRepo }from '../../Models/gh-repo';
 import { GhServiceService } from '../../service/gh-service.service';
 
 @Component({
   selector: 'app-users',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
 
   searchUsers = true;
 
-  githubUsers: GhUsers;
+  githubUsers: GhUser;
   githubRepos: GhRepo;
   userName: string;
 
@@ -40,3 +40,4 @@ export class UsersComponent implements OnInit {
   }
 
 }
+

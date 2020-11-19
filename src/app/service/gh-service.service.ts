@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment }from '../../environments/environment';
-import { GhUsers } from '../Models/gh-user';
+import { GhUser } from '../Models/gh-user';
 import { GhRepo } from '../Models/gh-repo';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GhServiceService {
-  updateUsers: GhUsers;
+  updateUsers: GhUser;
   updateRepo: GhRepo;
   access_token: string = environment.access_token;
 
   constructor(private http: HttpClient) {
-    this.updateUsers = new GhUsers('', '', '', '', '', '', 0, 0, 0, new Date());
+    this.updateUsers = new GhUser('', '', '', '', '', '', 0, 0, 0, new Date());
     this.updateRepo = new GhRepo('', '', '', new Date(), 0, 0, '');
   }
 

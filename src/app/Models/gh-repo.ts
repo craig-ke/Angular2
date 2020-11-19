@@ -1,5 +1,5 @@
 export class GhRepo {
-
+    
     constructor(
         public name: string,
         public html_url: string,

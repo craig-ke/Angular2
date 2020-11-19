@@ -1,4 +1,4 @@
-export class GhUsers {
+export class GhUser {
 
     constructor(
         public login: string,
@@ -12,5 +12,4 @@ export class GhUsers {
         public following: number,
         public created_at: Date
     ) { }
-    
 }
